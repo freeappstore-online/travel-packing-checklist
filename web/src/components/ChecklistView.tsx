@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import type { TripList, Category, CheckItem } from "../data/defaultLists";
+import type { TripList, CheckItem } from "../data/defaultLists";
 
 interface ChecklistViewProps {
   list: TripList;
@@ -120,7 +120,7 @@ export function ChecklistView({ list, onChange }: ChecklistViewProps) {
         <div className="flex-1">
           <div className="flex justify-between text-sm mb-1.5">
             <span style={{ color: "var(--ink)" }} className="font-medium">
-              {allDone ? "🎉 All packed!" : "Packing progress"}
+              {allDone ? "All packed!" : "Packing progress"}
             </span>
             <span style={{ color: "var(--muted)" }}>
               {checkedItems} / {totalItems}
@@ -178,7 +178,11 @@ export function ChecklistView({ list, onChange }: ChecklistViewProps) {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  {catDone && <span className="text-xs" style={{ color: "var(--success)" }}>✓ Done</span>}
+                  {catDone && (
+                    <span className="text-xs" style={{ color: "var(--success)" }}>
+                      Done
+                    </span>
+                  )}
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
@@ -222,7 +226,13 @@ export function ChecklistView({ list, onChange }: ChecklistViewProps) {
                       >
                         {item.checked && (
                           <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                            <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                            <path
+                              d="M1 4L3.5 6.5L9 1"
+                              stroke="white"
+                              strokeWidth="1.8"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
                           </svg>
                         )}
                       </button>
@@ -250,7 +260,7 @@ export function ChecklistView({ list, onChange }: ChecklistViewProps) {
                           style={{ color: "var(--error)" }}
                           aria-label="Delete item"
                         >
-                          ✕
+                          x
                         </button>
                       )}
                     </div>
@@ -262,7 +272,7 @@ export function ChecklistView({ list, onChange }: ChecklistViewProps) {
                       <input
                         ref={inputRef}
                         type="text"
-                        placeholder="Item name…"
+                        placeholder="Item name..."
                         value={newItemText[cat.id] || ""}
                         onChange={(e) =>
                           setNewItemText((prev) => ({ ...prev, [cat.id]: e.target.value }))
@@ -291,7 +301,7 @@ export function ChecklistView({ list, onChange }: ChecklistViewProps) {
                         className="text-sm px-2 py-1.5 rounded-lg"
                         style={{ color: "var(--muted)" }}
                       >
-                        ✕
+                        x
                       </button>
                     </div>
                   ) : (

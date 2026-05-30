@@ -34,8 +34,6 @@ function makeCategory(name: string, icon: string, labels: string[]): Category {
   };
 }
 
-export const DEFAULT_LISTS: Omit<TripList, "categories">[] & { categories: Omit<Category, "id">[] }[] = [];
-
 export function buildDefaultLists(): TripList[] {
   return [
     {
@@ -158,7 +156,7 @@ export function buildDefaultLists(): TripList[] {
           "Insect repellent",
         ]),
         makeCategory("Pack & Carry", "🎒", [
-          "Backpack (50–70L)",
+          "Backpack (50-70L)",
           "Dry bags / waterproof liners",
           "Trekking poles",
           "Gaiters",
@@ -186,7 +184,7 @@ export function buildDefaultLists(): TripList[] {
           "Copies of all documents (cloud backup)",
         ]),
         makeCategory("Clothing", "👗", [
-          "Versatile day outfits (5–7)",
+          "Versatile day outfits (5-7)",
           "Smart/evening outfit",
           "Comfortable walking shoes",
           "Dress shoes",
