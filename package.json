@@ -1,0 +1,14 @@
+{
+  "name": "travel-packing-checklist",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": { "node": ">=22" },
+  "pnpm": { "onlyBuiltDependencies": ["esbuild"] },
+  "scripts": {
+    "dev": "pnpm --filter @travel-packing-checklist/web dev",
+    "build": "pnpm --filter @travel-packing-checklist/web build",
+    "preview": "pnpm --filter @travel-packing-checklist/web preview",
+    "typecheck": "pnpm --filter @travel-packing-checklist/web exec tsc -b",
+    "test": "pnpm --filter @travel-packing-checklist/web test"
+  }
+}

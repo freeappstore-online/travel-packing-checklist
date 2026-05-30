@@ -1,0 +1,9 @@
+{
+  "name": "Pack&Go — Travel Packing Checklists",
+  "short_name": "Pack&Go",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "any"
+}
