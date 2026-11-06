@@ -1,0 +1,6 @@
+{
+  "appId": "travel-packing-checklist",
+  "applicationRoot": "web",
+  "outputPath": "web/dist",
+  "buildCommand": "pnpm build"
+}
