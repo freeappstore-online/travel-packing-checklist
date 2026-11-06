@@ -8,7 +8,6 @@
     "dev": "pnpm --filter @travel-packing-checklist/web dev",
     "build": "pnpm --filter @travel-packing-checklist/web build",
     "preview": "pnpm --filter @travel-packing-checklist/web preview",
-    "typecheck": "pnpm --filter @travel-packing-checklist/web exec tsc -b",
-    "test": "pnpm --filter @travel-packing-checklist/web test"
+    "typecheck": "pnpm --filter @travel-packing-checklist/web exec tsc -b"
   }
 }
